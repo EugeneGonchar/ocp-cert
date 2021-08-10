@@ -3,7 +3,9 @@ package com.ocp.cert.ocp_cert.chapter1.inner_class;
 import java.awt.List;
 import java.io.Serializable;
 
-public class ClassWithInnerClasses {
+import com.ocp.cert.ocp_cert.chapter1.inner_class.ClassWithMemberInnerClasses.NestedA.NestedB.NestedC;
+
+public class ClassWithMemberInnerClasses {
 
 	public int a = 1;
 	protected int b = 2;
@@ -26,19 +28,19 @@ public class ClassWithInnerClasses {
 		System.out.println("doD");
 	}
 
-	public void doStaticA() {
+	public static void doStaticA() {
 		System.out.println("doStaticA");
 	}
 
-	protected void doStaticB() {
+	protected static void doStaticB() {
 		System.out.println("doStaticB");
 	}
 
-	void doStaticC() {
+	static void doStaticC() {
 		System.out.println("doStaticC");
 	}
 
-	private void doStaticD() {
+	private static void doStaticD() {
 		System.out.println("doStaticD");
 	}
 
@@ -55,19 +57,18 @@ public class ClassWithInnerClasses {
 
 	}
 
+	@SuppressWarnings("unused")
 	private class PrivateInnerClass {
 
 	}
 
 	// extending and implementing
 	class ClassThatExtendAnotherClass extends List {
-
 		private static final long serialVersionUID = 1L;
-
 	}
 
 	class ClassThatImplementsInterface implements Serializable {
-
+		private static final long serialVersionUID = 1L;
 	}
 
 	// abstract and final
@@ -112,8 +113,34 @@ public class ClassWithInnerClasses {
 
 	}
 
+	// access to fields with the same names in nested classes
+	private int x = 1;
+
+	class NestedA {
+		private int x = 10;
+
+		class NestedB {
+			private int x = 20;
+
+			class NestedC {
+				private int x = 30;
+
+				public void getNestedXs() {
+					System.out.println(x);// 30
+					System.out.println(this.x);// 30
+					System.out.println(NestedB.this.x);// 20
+					System.out.println(NestedA.this.x);// 10
+					System.out.println(ClassWithMemberInnerClasses.this.x);// 1
+				}
+			}
+		}
+	}
+
 	public static void main(String... strings) {
-		AccessToOuterMembers accessToOuterMembers = new ClassWithInnerClasses().new AccessToOuterMembers();
+		AccessToOuterMembers accessToOuterMembers = new ClassWithMemberInnerClasses().new AccessToOuterMembers();
 		accessToOuterMembers.checkAccess();
+
+		NestedC nestedC = new ClassWithMemberInnerClasses().new NestedA().new NestedB().new NestedC();
+		nestedC.getNestedXs();
 	}
 }
