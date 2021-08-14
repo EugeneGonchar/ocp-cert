@@ -1,4 +1,4 @@
-package com.ocp.cert.ocp_cert.chapter1.inner_class;
+package com.ocp.cert.ocp_cert.chapter1.inner_classes;
 
 import java.awt.List;
 import java.io.Serializable;
