@@ -1,4 +1,4 @@
-package com.ocp.cert.ocp_cert.chapter1.inner_classes;
+package com.ocp.cert.chapter1.inner_classes;
 
 public class ClassWithLocalInnerClasses {
 

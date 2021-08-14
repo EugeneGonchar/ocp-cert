@@ -1,9 +1,9 @@
-package com.ocp.cert.ocp_cert.chapter1.inner_classes;
+package com.ocp.cert.chapter1.inner_classes;
 
 import java.awt.List;
 import java.io.Serializable;
 
-import com.ocp.cert.ocp_cert.chapter1.inner_classes.ClassWithMemberInnerClasses.NestedA.NestedB.NestedC;
+import com.ocp.cert.chapter1.inner_classes.ClassWithMemberInnerClasses.NestedA.NestedB.NestedC;
 
 public class ClassWithMemberInnerClasses {
 

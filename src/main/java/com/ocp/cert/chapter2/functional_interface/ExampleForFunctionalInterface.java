@@ -1,4 +1,4 @@
-package com.ocp.cert.ocp_cert.chapter2.functional_interface;
+package com.ocp.cert.chapter2.functional_interface;
 
 public class ExampleForFunctionalInterface {
 

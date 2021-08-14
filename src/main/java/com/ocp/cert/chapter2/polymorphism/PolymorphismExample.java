@@ -1,4 +1,4 @@
-package com.ocp.cert.ocp_cert.chapter2.polymorphism;
+package com.ocp.cert.chapter2.polymorphism;
 
 public class PolymorphismExample {
 
