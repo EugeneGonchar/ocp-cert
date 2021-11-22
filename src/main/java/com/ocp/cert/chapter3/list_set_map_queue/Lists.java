@@ -28,6 +28,7 @@ public class Lists {
 
 		// old implementation + extends Vector + LIFO
 		Stack<String> strings5 = new Stack<>();
+
 	}
 
 }

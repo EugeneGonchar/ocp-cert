@@ -12,4 +12,9 @@ public interface FunctionalExampleInterface {
 
 	}
 
+	// functional interface can contain default methods
+	default void defaultMethod() {
+		System.out.println("sysout");
+	}
+
 }

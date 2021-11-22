@@ -1,6 +1,5 @@
 package com.ocp.cert.chapter3.list_set_map_queue;
 
-import java.util.HashSet;
 import java.util.TreeSet;
 
 public class Sets {
@@ -12,8 +11,6 @@ public class Sets {
 		strings.floor(null); // <=
 		strings.higher(null); // >
 		strings.ceiling(null); // >=
-
-		HashSet<String> strings2 = new HashSet<>();
 	}
 
 }

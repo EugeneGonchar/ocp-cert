@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class ComparatorExample {
+public class ComparatorExample implements Comparator<String> {
 
 	private String name;
 
@@ -42,6 +42,11 @@ public class ComparatorExample {
 	@Override
 	public String toString() {
 		return "ComparatorExample [name=" + name + "]";
+	}
+
+	@Override
+	public int compare(String o1, String o2) {
+		return 0;
 	}
 
 }
